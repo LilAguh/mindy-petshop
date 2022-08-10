@@ -1,0 +1,310 @@
+:root{
+  --macaroni-and-cheese: #F8C592ff;
+  --liver-organ: #75372Dff;
+  --liver-organ-2: #75372Dff;
+  --amazon: #598063ff;
+  --brown-sugar: #AC7455ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 75vh;
+  width: 100%;
+}
+/*-------HEADER------------------------------------------------------------------------------------------------------------------------*/
+.nav{
+  background-color: white;
+  width: 100%;
+  height: 120px;
+}
+.navContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+}
+
+
+    /* LOGO ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.logoContainer{
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 80px;
+}
+
+
+    /* ANCHORDS NAV -------------------------------------------------------------------------------------------------------------------------------------------------*/
+.navItemContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+.navLink{
+  color: black;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+.navLink:hover{
+  background-color: rgb(178, 10, 89);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+
+
+    /* HAMBURGUER NAV BUTTON -------------------------------------------------------------------------------------------------------------------------------------------*/
+.navToggle{
+  display: none;
+}
+.navHamburger{
+  width: 26px;
+  height: 26px;
+}
+
+
+
+
+
+
+
+
+
+.mainContacto {
+  background-color: #f8c592ff;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.315);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 600px;
+}
+.form-size {
+  height: 10rem;
+}
+
+
+.p-logo-footer {
+  font-family: "Russo One", sans-serif;
+}
+.textContact {
+  background-color: rgba(0, 0, 0, 0.315);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 600px;
+}
+
+.infoContact {
+  display: flex;
+  flex-direction: column;
+}
+/* pet shop */
+.imgTamaño{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.ultimas{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #598063ff;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.btn-buy:active{
+  border: 2px solid #F8C592ff;
+}
+.btn-buy{
+  background-color:#75372Dff;
+  color: #F8C592ff;
+  margin-top: 0.5rem;
+}
+.btn-buy:hover{
+  background-color: #75372Dff;
+}
+.card2{
+  
+  background-color:#AC7455ff;
+  border-radius: 8px;
+  border: 2px solid #598063ff;
+  color:#F8C592ff;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+
+.cajaShop{
+  display: flex;
+  flex-direction: row;
+}
+
+.cajaCards{
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cajaCheck{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 4px solid #598063ff;
+  color: #75372Dff;
+}
+.container{
+  width: 80%;
+}
+.check1{
+  height: 40%;
+  padding-top: 2rem;
+}
+.check2{
+  height: 60%;
+  padding-top: 2rem;
+}
+.inputCheck:checked{
+  background-color: #598063ff ;
+  border: 1px solid #75372Dff ;
+}
+.inputCheck{
+  border: 1px solid #75372Dff ;
+}
+/*-------FOOTER------------------------------------------------------------------------------------------------------------------------*/
+/* #logoLetra{
+  height: 24rem;
+  width: 24rem;
+} */
+.pie-pagina{
+  width: 100%;
+      background-color: #75372Dff;
+      color: #000;  
+      
+    }
+    .pie-pagina .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .icons {
+        gap: 17px;
+        display: flex;
+        justify-items: center;
+    }
+    .pie-pagina .grupo-2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      color: black;
+      text-decoration: none;
+    }
+    a.mail{
+      text-decoration: none;
+      color: #000;
+    }
+#myBtn {
+  display: none;
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  outline: none; 
+  background-color: goldenrod;
+  color: black; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 50px; 
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+  background-color: yellow; 
+}
+
+
+
+
+
+
+
+@media (max-width: 768px){
+  .navItemContainer{
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    position: fixed;
+    top: 42px;
+    left: 100%;
+    width: 100%;
+    padding: 20px 0;
+    transition: left 0.3s;
+    padding: 0 0px;
+    border-top: 3px solid rgb(178, 10, 89);
+  }
+  .navLink:hover{
+    background: none;
+    color: rgb(178, 10, 89);
+  }
+  .navToggle{
+    display: block;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 5px 20px;
+    line-height: 20px;
+  }
+  .navContainer{
+    margin: 0 10px;
+  }
+  .navMenuVisible{
+    left: 0;
+  }
+  .pageContainer{
+    padding: 0 10px;
+  }
+  footer{
+    flex-direction: column;
+    height: 18vh;
+  }
+  .card{
+    width: 300px;
+    height: 430px;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px){
+  #logoLetra{
+    display: none;
+  }
+    .pie-pagina .grupo-1{
+  flex-wrap: wrap;
+    }
+}
