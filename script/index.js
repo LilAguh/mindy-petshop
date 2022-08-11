@@ -16,11 +16,11 @@ function topFunction() {
 }
 
 // BUTTON MENU
-let navMenuContainer = document.querySelector('.navMenuContainer')
-let navMenuButton = document.querySelector('.navMenuButton')
+let navItemContainer = document.querySelector('.navItemContainer')
+let navToggle = document.querySelector('.navToggle')
 
-navMenuButton.addEventListener('click', () => {
-  navMenuContainer.classList.toggle('navMenuAction')
+navToggle.addEventListener('click', () => {
+  navItemContainer.classList.toggle('navMenuVisible')
 })
 
 
