@@ -1,3 +1,4 @@
+// SCROLL TO TOP BUTTON
 mybutton = document.getElementById("myBtn");
 
 window.onscroll = function () { scrollFunction() };
@@ -24,4 +25,3 @@ navToggle.addEventListener('click', () => {
 })
 
 
-// SCROLL TO TOP BUTTON

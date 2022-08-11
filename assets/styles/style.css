@@ -425,6 +425,63 @@ article h2 {
 .inputCheck{
   border: 1px solid #75372Dff ;
 }
+/*PETSHOP DESDE EL JS DE ELVIO*/
+.card{
+  display: flex;
+}
+
+.carrito-html{
+  position: absolute;
+  top: 82px;
+  right: 20px;
+  background-color: rgb(246, 206, 94);
+  /* background-color: white; */
+  min-width: 300px;
+  text-align: center;
+  z-index: 1;
+  border: 2px solid black;
+  /* display: none; */
+}
+
+.close{
+  background-color: red;
+  /* border-radius: 50%; */
+  text-align: center;
+  padding: 1px 5px;
+  /* border-radius: 50%; */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left:10px ;
+  border: 1px solid black;
+}
+
+.ocultar{
+  display: none;
+}
+.carta-carrito-top{
+  border-bottom: 4px solid orangered;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.imgCarrito{
+  width: 60px;
+  height: 60px;
+}
+
+.imagen{
+height: 300px;
+}
+
+.cartas{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
 /*-------FOOTER------------------------------------------------------------------------------------------------------------------------*/
 /* #logoLetra{
   height: 30rem;
@@ -625,3 +682,4 @@ p > a:hover{
     height: 200px;
   }
 }
+
