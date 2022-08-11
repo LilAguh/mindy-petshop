@@ -145,6 +145,7 @@ const mostrarPagina = (data) => {
       carta += ` <div class="card gap-2 d-flex flex-wrap m-4 justify-content-between" style="width: 18rem;">
                      <img src="${item.imagen}" class="card-img-top imagen" alt="${item.nombre}"> 
                     <h5 class="card-title">${item.nombre}</h5>
+                    <p class="container card-text">${item.tipo}</p>
                     <p class="container card-text">${item.descripcion}</p>
                     <div class="d-flex justify-content-around ">
                     <p>Price: $<span class="precio">${item.precio}</span></p>
@@ -208,6 +209,7 @@ const mostrarPagina = (data) => {
   function leerInfo(producto) {
     const infoProducto = {
       nombre: producto.querySelector(".card-title").textContent,
+      tipo: producto.querySelector(".card-text").textContent,
       precio: producto.querySelector(".precio").textContent,
       imagen: producto.querySelector(".imagen").src,
       id: producto.querySelector(".boton").getAttribute("id"),
@@ -253,6 +255,7 @@ const mostrarPagina = (data) => {
           <img src="${producto.imagen}" class="imgCarrito" alt="${producto.nombre}">
           <div class="descripcion-carrito"> 
           <p>${producto.nombre}</p>
+          <p>${producto.tipo}</p>
           <h5>$${producto.precio}</h5>
           <h5>cantidad ${producto.cantidad}</h5>
           </div>
