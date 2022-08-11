@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Benson";
-  src: url(/assets/fonts/benson.ttf);
+  src: url("../fonts/benson.ttf");
 }
 * {
   margin: 0;
