@@ -1,9 +1,12 @@
 :root{
   --macaroni-and-cheese: #F8C592ff;
   --liver-organ: #75372Dff;
-  --liver-organ-2: #75372Dff;
   --amazon: #598063ff;
   --brown-sugar: #AC7455ff;
+}
+@font-face {
+  font-family: "Benson";
+  src: url(/assets/fonts/benson.ttf);
 }
 * {
   margin: 0;
@@ -11,35 +14,43 @@
   box-sizing: border-box;
 }
 
-main {
-  min-height: 75vh;
-  width: 100%;
-}
 /*-------HEADER------------------------------------------------------------------------------------------------------------------------*/
-.nav{
-  background-color: white;
+header{
+  background-color: var(--macaroni-and-cheese);
   width: 100%;
   height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .navContainer{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 100px;
+  width: 80%;
+  height: 100%;
+  padding: 0 20px;
+  border-bottom: 2px solid var(--liver-organ);
+}
+hr{
+  width: 80%;
+  height: 1px;
+  background-color: var(--liver-organ);
 }
 
 
-    /* LOGO ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  /* LOGO */
 .logoContainer{
   display: flex;
   align-items: center;
 }
 .logo{
-  width: 80px;
+  width: 110px;
 }
 
 
-    /* ANCHORDS NAV -------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ANCHORDS NAV */
 .navItemContainer{
   display: flex;
   justify-content: space-between;
@@ -47,29 +58,24 @@ main {
   list-style: none;
   gap: 10px;
 }
-.navLink{
-  color: black;
+.navMenuLink{
+  color: var(--liver-organ);
   text-decoration: none;
   padding: 8px;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
 }
-.navLink:hover{
-  background-color: rgb(178, 10, 89);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: white;
-}
-a.dropdown{
-  text-decoration: none;
-  color: #000;
+.navMenuLink:hover{
+  background-color: var(--liver-organ);
+  border-radius: 12px;
+  color: var(--macaroni-and-cheese);
 }
 
-    /* HAMBURGUER NAV BUTTON -------------------------------------------------------------------------------------------------------------------------------------------*/
+  /* HAMBURGUER NAV BUTTON */
 .navToggle{
   display: none;
 }
@@ -78,6 +84,120 @@ a.dropdown{
   height: 26px;
 }
 
+  /* DROPDOWN BUTTON */
+  #dropdownButton{
+    background-color: var(--macaroni-and-cheese);
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--liver-organ);
+    border-radius: 12px;
+    border: 2px solid var(--liver-organ);
+  }
+  #dropdownButton:active{
+    background-color: var(--liver-organ);
+    color: var(--macaroni-and-cheese);
+  }
+  #dropdownButton:focus{
+    box-shadow: none;
+  }
+  #dropdownMenu{
+    background-color: var(--macaroni-and-cheese);
+    border: 2px solid var(--liver-organ);
+    padding: 4px;
+  }
+  #dropdownLink{
+    color: var(--liver-organ);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+  #dropdownLink:hover{
+    background-color: var(--liver-organ);
+    border-radius: 12px;
+    padding: 8px;
+    color: var(--macaroni-and-cheese);
+  }
+
+
+/*-------MAIN---------------------------------------------------------------------------------------------------------------------------*/
+main {
+  min-height: 75vh;
+  width: 100%;
+  background-color: var(--macaroni-and-cheese);
+}
+p{
+  margin: 0 !important;
+}
+.mainTextContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px 0;
+}
+.mainTextContainer > h2{
+  font-size: 70px;
+  font-weight: 500;
+  color: var(--liver-organ);
+  font-family: "Benson";
+  text-shadow: 2px 2px 2px var(--amazon);
+}
+.mainTextContainer > p{
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--liver-organ);
+  margin-bottom: 20px;
+}
+
+
+/*-------GALERIA-----------------------------------------------------------------------------------------------------------------------*/
+.galeryContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.galeryContainer > h3{
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--liver-organ);
+  margin-bottom: 20px;
+  font-family: "Benson";
+  text-shadow: 2px 2px 2px var(--amazon);
+}
+.container-img {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px;
+}
+.container-img .box-img figure {
+  width: 100%;
+  height: 100%;
+}
+.container-img .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-img .box-img:nth-child(1) {
+  grid-column-start: span 2;
+}
+.container-img .box-img:nth-child(4) {
+  grid-row-start: span 2;
+}
 
 
 
@@ -86,6 +206,7 @@ a.dropdown{
 
 
 
+/*-------CONTACTO----------------------------------------------------------------------------------------------------------------------*/
 .mainContacto {
   background-color: #f8c592ff;
 }
@@ -100,8 +221,6 @@ form {
 .form-size {
   height: 10rem;
 }
-
-
 .p-logo-footer {
   font-family: "Russo One", sans-serif;
 }
@@ -112,11 +231,121 @@ form {
   color: white;
   width: 600px;
 }
-
 .infoContact {
   display: flex;
   flex-direction: column;
 }
+
+/*-------BANNER------------------------------------------------------------------------------------------------------------------------*/
+article {
+  min-height: 10vh;
+  background-color: #dfdfdf;
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container > img.blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+article h2 {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-blocks {
+  margin-top: 15px;
+  height: 120px;
+  width: auto;
+  justify-content: center;
+}
+.p-banner {
+  font-size: x-large;
+  font-weight: bold;
+}
+/* CSS TEXTO BANNER SHOP INDEX */
+.banner-shop {
+  background-color: #598063ff;
+}
+.p-shop {
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+}
+
+/* CSS BUTTON SHOP INDEX */
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+/* CUPON  */
+
+.cuponContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #F8C592ff;
+}
+
+.cuponText {
+  color: blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cuponText > span{
+  border: 2px solid black;
+  border-radius: 360px;
+  background-color: #AC7455ff;
+  padding: 5px;
+  color: black;
+}
+
+.cuponButton{
+  color: white;
+  background-color: rgb(65, 65, 252);
+  padding: 5px;
+}
+
 /* pet shop */
 .imgTamaño{
   object-fit: cover;
@@ -223,7 +452,7 @@ form {
   align-items: center;
 }
 .footerLogo{
-  height:200px;
+  height:230px;
 }
 .box{
   width: 100%;
@@ -290,8 +519,96 @@ p > a:hover{
 }
 
 @media (max-width: 768px){
+  /* NAVBAR*/
+  .navContainer{
+    width: 90%;
+    padding: 0;
+  }
+  .navItemContainer{
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    position: fixed;
+    top: 120px;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    transition: left 0.3s;
+    padding: 0 0px;
+    z-index: 3;
+  }
+  .navLink:hover{
+    background: none;
+    color: rgb(178, 10, 89);
+  }
+  .navToggle{
+    display: block;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 5px 20px;
+    line-height: 20px;
+  }
+  .navMenuVisible{
+    left: 0;
+  }
+  .pageContainer{
+    padding: 0 10px;
+  }
+  /* MAIN*/
+  .mainTextContainer{
+    padding: 60px 20px;
+  }
+  .mainTextContainer > h2{
+    font-size: 60px;
+    padding: 20px 0; 
+  }
+
+  /* GALERIA*/
+  .galeryContainer > h3{
+    font-size: 35px;
+    margin-bottom: 20px;
+    padding: 0 40px;
+  }
+  .container-img {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 200px;
+  }
+  .container-img .box-img:nth-child(1) {
+    grid-column-start: span 1;
+  }
+
+  /* BANNER*/
+  article {
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+  #myBtn{
+    display: none !important; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    outline: none;  
+    background-color: goldenrod;
+    color: black; 
+    cursor: pointer; 
+    padding: 10px; 
+    border-radius: 50px; 
+    font-size: 18px; 
+  }
+  .logoDog{
+    height: 45px;
+    width: 45px;
+    display: none;
+  }
   #logoLetra{
-      display: none;
+    display: none;
   }
   .footerSection1{
       flex-wrap: wrap;
@@ -299,28 +616,16 @@ p > a:hover{
   .box{
       padding: 15px 0;
   }
-  
+
 }
 
-@media (max-width: 500px){
-
-#myBtn{
-display: none !important; 
-position: fixed; 
-bottom: 20px; 
-right: 30px; 
-z-index: 99; 
-outline: none;  
-background-color: goldenrod;
-color: black; 
-cursor: pointer; 
-padding: 10px; 
-border-radius: 50px; 
-font-size: 18px; 
-}
-.logoDog{
-  height: 45px;
-  width: 45px;
-  display: none;
-}
+@media screen and (max-width: 500px) {
+  /* GALERIA*/
+  .container-img {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container-img .box-img img {
+    height: 200px;
+  }
 }
