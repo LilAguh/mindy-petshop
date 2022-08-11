@@ -64,7 +64,10 @@ main {
   border-top-right-radius: 10px;
   color: white;
 }
-
+a.dropdown{
+  text-decoration: none;
+  color: #000;
+}
 
     /* HAMBURGUER NAV BUTTON -------------------------------------------------------------------------------------------------------------------------------------------*/
 .navToggle{
@@ -195,38 +198,74 @@ form {
 }
 /*-------FOOTER------------------------------------------------------------------------------------------------------------------------*/
 /* #logoLetra{
-  height: 24rem;
-  width: 24rem;
+  height: 30rem;
+  width: 30rem;
+  background-color: #75372Dff;
 } */
-.pie-pagina{
+.footer{
+  /* position: absolute; */
+  bottom: 0px;
   width: 100%;
-      background-color: #75372Dff;
-      color: #000;  
-      
-    }
-    .pie-pagina .grupo-1{
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-      }
-      .icons {
-        gap: 17px;
-        display: flex;
-        justify-items: center;
-    }
-    .pie-pagina .grupo-2{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    p{
-      color: black;
-      text-decoration: none;
-    }
-    a.mail{
-      text-decoration: none;
-      color: #000;
-    }
+  background-color: var(--liver-organ);
+  color: var(--macaroni-and-cheese);  
+}
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.footerSection1{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footerLogo{
+  height:200px;
+}
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  color: var(--macaroni-and-cheese);
+}
+.box > p{
+  color: var(--macaroni-and-cheese);
+  font-size: 20px;
+}
+p > a{
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--macaroni-and-cheese);
+  gap: 5px;
+}
+p > a:hover{
+  color: var(--liver-organ);
+  background-color: var(--macaroni-and-cheese);
+  padding: 5px 0;
+  border-radius: 10px;
+}
+.footerIconContainer{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 0;
+}
+.footerIcon{
+  height: 50px;
+  width: 50px;
+}
+.grupo-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #75372Dff;
+}
 #myBtn {
   display: none;
   position: fixed; 
@@ -237,7 +276,7 @@ form {
   background-color: goldenrod;
   color: black; 
   cursor: pointer; 
-  padding: 15px; 
+  padding: 10px; 
   border-radius: 50px; 
   font-size: 18px; 
 }
@@ -245,66 +284,43 @@ form {
 #myBtn:hover {
   background-color: yellow; 
 }
-
-
-
-
-
-
+.logoDog{
+  height: 45px;
+  width: 45px;
+}
 
 @media (max-width: 768px){
-  .navItemContainer{
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: white;
-    position: fixed;
-    top: 42px;
-    left: 100%;
-    width: 100%;
-    padding: 20px 0;
-    transition: left 0.3s;
-    padding: 0 0px;
-    border-top: 3px solid rgb(178, 10, 89);
-  }
-  .navLink:hover{
-    background: none;
-    color: rgb(178, 10, 89);
-  }
-  .navToggle{
-    display: block;
-    color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 5px 20px;
-    line-height: 20px;
-  }
-  .navContainer{
-    margin: 0 10px;
-  }
-  .navMenuVisible{
-    left: 0;
-  }
-  .pageContainer{
-    padding: 0 10px;
-  }
-  footer{
-    flex-direction: column;
-    height: 18vh;
-  }
-  .card{
-    width: 300px;
-    height: 430px;
-    display: flex;
-    border: 2px solid black;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 500px){
   #logoLetra{
-    display: none;
+      display: none;
   }
-    .pie-pagina .grupo-1{
-  flex-wrap: wrap;
-    }
+  .footerSection1{
+      flex-wrap: wrap;
+  }
+  .box{
+      padding: 15px 0;
+  }
+  
+}
+
+@media (max-width: 500px){
+
+#myBtn{
+display: none !important; 
+position: fixed; 
+bottom: 20px; 
+right: 30px; 
+z-index: 99; 
+outline: none;  
+background-color: goldenrod;
+color: black; 
+cursor: pointer; 
+padding: 10px; 
+border-radius: 50px; 
+font-size: 18px; 
+}
+.logoDog{
+  height: 45px;
+  width: 45px;
+  display: none;
+}
 }
