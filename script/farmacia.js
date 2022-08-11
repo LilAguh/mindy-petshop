@@ -68,9 +68,9 @@ const mostrarPagina = (data) => {
 
   function crearCheckbox() {
     div = `
-    <div> 
-      <input type="search" name="search" id="search" placeholder="Search" aria-label="Search" />
-    </div>
+    <div class="group">
+        <input placeholder="Buscar" type="search" class="input" name="search" id="search"  aria-label="Search">
+      </div>
   `
     categoriasSinRepetidos.forEach(checkbox => {
       div += `
