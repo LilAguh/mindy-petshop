@@ -527,7 +527,7 @@ p > a:hover{
   .navItemContainer{
     flex-direction: column;
     justify-content: flex-start;
-    background-color: white;
+    background-color: var(--macaroni-and-cheese);
     position: fixed;
     top: 120px;
     left: 100%;
@@ -537,10 +537,6 @@ p > a:hover{
     transition: left 0.3s;
     padding: 0 0px;
     z-index: 3;
-  }
-  .navLink:hover{
-    background: none;
-    color: rgb(178, 10, 89);
   }
   .navToggle{
     display: block;
