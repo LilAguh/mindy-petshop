@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Farmacia</title>
+</head>
+<body>
+  <header>
+    <div class="navContainer">
+        <a class="logoContainer" href="#">
+            <img class="logo" src="../images/logo.png" alt="Logo">
+        </a>
+        <button class="navToggle">
+            <img class="navHamburger" src="../images/icons/menu1.png" alt="Hamburger menu">
+        </button>
+        <ul class="navItemContainer">
+            <li class="navMenuItem"><a href="../../index.html" class="navMenuLink">Home</a></li>
+            <li class="navMenuItem">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle"  id="dropdownButton" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Shop
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li>
+                          <a class="dropdown" id="dropdownLink" href="./farmacia.html">Farmacia</a>
+                        </li>
+                        <li>
+                          <a class="dropdown" id="dropdownLink" href="./juguetes.html">Juguetes</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navMenuItem"><a href="./contact.html" class="navMenuLink">Contacto</a></li>
+            <li class="navMenuItem"><a href="#" class="navMenuLink">Carrito</a></li>
+        </ul>
+      </div>
+
+
+                    <!-- CONTADOR DE CARRITO  -->
+                    
+    </header>
+
+    <main>
+       <!-- carrito de compra  -->
+      <div class="carrito-html">
+        <div class="d-flex text-center justify-content-center" >
+          <h4>carrito</h4>
+          <p class="cantidadCarrito text-center">0</p>
+        </div>
+
+          <div class="carta-carrito">
+          </div>
+        
+        <p>total: $ <span class="precioTotal"></span></p>
+      </div>   <!-- carrito de compra  -->
+        
+
+
+
+
+
+        <div>
+          <h2>Pet Shop</h2>
+          <h3>Farmacia</h3>
+            <div class="container">
+              <div class="checkPrecios">
+                <!-- check precios  -->
+              </div>
+
+              <div>
+                <div class="cartas mt-5 ">
+                  <!-- cartas  -->
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+      <div class="footerContainer">
+          <div class="footerSection1">
+              <div class="box">
+                  <figure>
+                      <a href="./index.html">
+                          <img id="logoLetra" class="footerLogo" src="../images/letras2.png " alt="">
+                      </a>
+                  </figure>
+              </div>
+              <div class="box">
+                  <h2>Contacto</h2>
+                  <p>Mail: <a class="mail" href="mailto:Mail:mindypetshop@hotmail.com">mindypetshop@hotmail.com</a>
+                  </p>
+                  <p>Tel: <a href="tel:54 11 234 6543">+54 11 234 6543</a> </p>
+              </div>
+              <div class="box">
+                  <h2>Siguenos</h2>
+                  <div class="footerIconContainer">
+                      <a href="https://www.instagram.com/">
+                          <img src="../images/icons/instagram.png" alt="" class="footerIcon">
+                      </a>
+                      <a href="https://www.facebook.com/">
+                          <img src="../images/icons/facebook.png" alt="" class="footerIcon">
+                      </a>
+                      <a href="https://web.whatsapp.com/">
+                          <img src="../images/icons/whatsapp.png" alt="" class="footerIcon">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="grupo-2">
+          <div>
+              <small>&copy;2022 <b>Grupo 3</b> - Todos los Derechos Reservados. </small>
+          </div>
+      </div>
+      <div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="logoDog" src="../images/upDog" alt=""></button>
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/91dadb00af.js" crossorigin="anonymous"></script>
+    <script src="../../script/farmacia.js"></script>
+</body>
+</html>
