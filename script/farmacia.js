@@ -213,7 +213,6 @@ const mostrarPagina = (data) => {
       id: producto.querySelector(".boton").getAttribute("id"),
       cantidad: 1
     }
-
     totalCartas = parseFloat(totalCartas) + parseFloat(infoProducto.precio)
     totalCartas = totalCartas.toFixed(2)  // precio actual + precio producto
 
@@ -228,12 +227,11 @@ const mostrarPagina = (data) => {
         }
       })
       productoComprado = [...prod] // [productos comprados]
-      // localStorage.setItem("producto",productoComprado)
+ 
     } else {
       productoComprado = [...productoComprado, infoProducto] // el producto es nuevo
       contadorCarrito++
-      // localStorage.setItem("producto",productoComprado)
-      // localStorage.clear()
+
     }
     cargarHtml()
     console.log(productoComprado)
