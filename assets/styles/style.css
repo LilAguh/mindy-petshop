@@ -1,8 +1,8 @@
-:root{
-  --macaroni-and-cheese: #F8C592ff;
-  --liver-organ: #75372Dff;
+:root {
+  --macaroni-and-cheese: #f8c592ff;
+  --liver-organ: #75372dff;
   --amazon: #598063ff;
-  --brown-sugar: #AC7455ff;
+  --brown-sugar: #ac7455ff;
 }
 @font-face {
   font-family: "Benson";
@@ -15,7 +15,7 @@
 }
 
 /*-------HEADER------------------------------------------------------------------------------------------------------------------------*/
-header{
+header {
   background-color: var(--macaroni-and-cheese);
   width: 100%;
   height: 120px;
@@ -24,7 +24,7 @@ header{
   align-items: center;
   flex-direction: column;
 }
-.navContainer{
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,32 +33,30 @@ header{
   padding: 0 20px;
   border-bottom: 2px solid var(--liver-organ);
 }
-hr{
+hr {
   width: 80%;
   height: 1px;
   background-color: var(--liver-organ);
 }
 
-
-  /* LOGO */
-.logoContainer{
+/* LOGO */
+.logoContainer {
   display: flex;
   align-items: center;
 }
-.logo{
+.logo {
   width: 110px;
 }
 
-
 /* ANCHORDS NAV */
-.navItemContainer{
+.navItemContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   gap: 10px;
 }
-.navMenuLink{
+.navMenuLink {
   color: var(--liver-organ);
   text-decoration: none;
   padding: 8px;
@@ -69,60 +67,75 @@ hr{
   justify-content: center;
   width: max-content;
 }
-.navMenuLink:hover{
+.navMenuLink:hover {
   background-color: var(--liver-organ);
   border-radius: 12px;
   color: var(--macaroni-and-cheese);
 }
 
-  /* HAMBURGUER NAV BUTTON */
-.navToggle{
+/* HAMBURGUER NAV BUTTON */
+.navToggle {
   display: none;
 }
-.navHamburger{
+.navHamburger {
   width: 26px;
   height: 26px;
 }
 
-  /* DROPDOWN BUTTON */
-  #dropdownButton{
-    background-color: var(--macaroni-and-cheese);
-    padding: 8px;
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--liver-organ);
-    border-radius: 12px;
-    border: 2px solid var(--liver-organ);
-  }
-  #dropdownButton:active{
-    background-color: var(--liver-organ);
-    color: var(--macaroni-and-cheese);
-  }
-  #dropdownButton:focus{
-    box-shadow: none;
-  }
-  #dropdownMenu{
-    background-color: var(--macaroni-and-cheese);
-    border: 2px solid var(--liver-organ);
-    padding: 4px;
-  }
-  #dropdownLink{
-    color: var(--liver-organ);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-  }
-  #dropdownLink:hover{
-    background-color: var(--liver-organ);
-    border-radius: 12px;
-    padding: 8px;
-    color: var(--macaroni-and-cheese);
-  }
-
+/* DROPDOWN BUTTON */
+#dropdownButton {
+  background-color: var(--macaroni-and-cheese);
+  padding: 8px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--liver-organ);
+  border-radius: 12px;
+  border: 2px solid var(--liver-organ);
+}
+#dropdownButton:active {
+  background-color: var(--liver-organ);
+  color: var(--macaroni-and-cheese);
+}
+#dropdownButton:focus {
+  box-shadow: none;
+}
+#dropdownMenu {
+  background-color: var(--macaroni-and-cheese);
+  border: 2px solid var(--liver-organ);
+  padding: 4px;
+}
+#dropdownLink {
+  color: var(--liver-organ);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+#dropdownLink:hover {
+  background-color: var(--liver-organ);
+  border-radius: 12px;
+  padding: 8px;
+  color: var(--macaroni-and-cheese);
+}
+#dropdownLink2 {
+  color: var(--liver-organ);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+#dropdownLink2:hover {
+  background-color: var(--liver-organ);
+  border-radius: 12px;
+  padding: 8px;
+  color: var(--macaroni-and-cheese);
+}
 
 /*-------MAIN---------------------------------------------------------------------------------------------------------------------------*/
 main {
@@ -130,10 +143,10 @@ main {
   width: 100%;
   background-color: var(--macaroni-and-cheese);
 }
-p{
+p {
   margin: 0 !important;
 }
-.mainTextContainer{
+.mainTextContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,30 +154,29 @@ p{
   width: 100%;
   padding: 60px 0;
 }
-.mainTextContainer > h2{
+.mainTextContainer > h2 {
   font-size: 70px;
   font-weight: 500;
   color: var(--liver-organ);
   font-family: "Benson";
   text-shadow: 2px 2px 2px var(--amazon);
 }
-.mainTextContainer > p{
+.mainTextContainer > p {
   font-size: 22px;
   font-weight: 500;
   color: var(--liver-organ);
   margin-bottom: 20px;
 }
 
-
 /*-------GALERIA-----------------------------------------------------------------------------------------------------------------------*/
-.galeryContainer{
+.galeryContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.galeryContainer > h3{
+.galeryContainer > h3 {
   font-size: 50px;
   font-weight: 500;
   color: var(--liver-organ);
@@ -176,7 +188,7 @@ p{
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  
+
   margin-bottom: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -198,13 +210,6 @@ p{
 .container-img .box-img:nth-child(4) {
   grid-row-start: span 2;
 }
-
-
-
-
-
-
-
 
 /*-------CONTACTO----------------------------------------------------------------------------------------------------------------------*/
 .mainContacto {
@@ -322,7 +327,7 @@ article h2 {
   align-items: center;
   width: 100%;
   height: 60px;
-  background-color: #F8C592ff;
+  background-color: #f8c592ff;
 }
 
 .cuponText {
@@ -332,27 +337,27 @@ article h2 {
   align-items: center;
 }
 
-.cuponText > span{
+.cuponText > span {
   border: 2px solid black;
   border-radius: 360px;
-  background-color: #AC7455ff;
+  background-color: #ac7455ff;
   padding: 5px;
   color: black;
 }
 
-.cuponButton{
+.cuponButton {
   color: white;
   background-color: rgb(65, 65, 252);
   padding: 5px;
 }
 
 /* pet shop */
-.imgTamaño{
+.imgTamaño {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
-.ultimas{
+.ultimas {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -362,35 +367,34 @@ article h2 {
   font-size: 20px;
   font-weight: 500;
 }
-.btn-buy:active{
-  border: 2px solid #F8C592ff;
+.btn-buy:active {
+  border: 2px solid #f8c592ff;
 }
-.btn-buy{
-  background-color:#75372Dff;
-  color: #F8C592ff;
+.btn-buy {
+  background-color: #75372dff;
+  color: #f8c592ff;
   margin-top: 0.5rem;
 }
-.btn-buy:hover{
-  background-color: #75372Dff;
+.btn-buy:hover {
+  background-color: #75372dff;
 }
-.card2{
-  
-  background-color:#AC7455ff;
+.card2 {
+  background-color: #ac7455ff;
   border-radius: 8px;
   border: 2px solid #598063ff;
-  color:#F8C592ff;
+  color: #f8c592ff;
   height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: space-evenly;
 }
 
-.cajaShop{
+.cajaShop {
   display: flex;
   flex-direction: row;
 }
 
-.cajaCards{
+.cajaCards {
   gap: 1rem;
   display: flex;
   flex-direction: row;
@@ -398,39 +402,39 @@ article h2 {
   align-items: center;
   justify-content: center;
 }
-.cajaCheck{
+.cajaCheck {
   width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-right: 4px solid #598063ff;
-  color: #75372Dff;
+  color: #75372dff;
 }
-.container{
+.container {
   width: 80%;
 }
-.check1{
+.check1 {
   height: 40%;
   padding-top: 2rem;
 }
-.check2{
+.check2 {
   height: 60%;
   padding-top: 2rem;
 }
-.inputCheck:checked{
-  background-color: #598063ff ;
-  border: 1px solid #75372Dff ;
+.inputCheck:checked {
+  background-color: #598063ff;
+  border: 1px solid #75372dff;
 }
-.inputCheck{
-  border: 1px solid #75372Dff ;
+.inputCheck {
+  border: 1px solid #75372dff;
 }
 /*PETSHOP DESDE EL JS DE ELVIO*/
-.card{
+.card {
   display: flex;
 }
 
-.carrito-html{
+.carrito-html {
   position: absolute;
   top: 82px;
   right: 20px;
@@ -443,7 +447,7 @@ article h2 {
   /* display: none; */
 }
 
-.close{
+.close {
   background-color: red;
   /* border-radius: 50%; */
   text-align: center;
@@ -452,35 +456,32 @@ article h2 {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  margin-left:10px ;
+  margin-left: 10px;
   border: 1px solid black;
 }
 
-.ocultar{
+.ocultar {
   display: none;
 }
-.carta-carrito-top{
+.carta-carrito-top {
   border-bottom: 4px solid orangered;
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
 }
-.imgCarrito{
+.imgCarrito {
   width: 60px;
   height: 60px;
 }
 
-.imagen{
-height: 300px;
+.imagen {
+  height: 300px;
 }
 
-.cartas{
+.cartas {
   display: flex;
   flex-wrap: wrap;
 }
-
-
-
 
 /*-------FOOTER------------------------------------------------------------------------------------------------------------------------*/
 /* #logoLetra{
@@ -488,30 +489,30 @@ height: 300px;
   width: 30rem;
   background-color: #75372Dff;
 } */
-.footer{
+.footer {
   /* position: absolute; */
   bottom: 0px;
   width: 100%;
   background-color: var(--liver-organ);
-  color: var(--macaroni-and-cheese);  
+  color: var(--macaroni-and-cheese);
 }
-.footerContainer{
+.footerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;
 }
-.footerSection1{
+.footerSection1 {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.footerLogo{
-  height:230px;
+.footerLogo {
+  height: 230px;
 }
-.box{
+.box {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -520,68 +521,68 @@ height: 300px;
   gap: 10px;
   color: var(--macaroni-and-cheese);
 }
-.box > p{
+.box > p {
   color: var(--macaroni-and-cheese);
   font-size: 20px;
 }
-p > a{
+p > a {
   text-decoration: none;
   font-size: 20px;
   color: var(--macaroni-and-cheese);
   gap: 5px;
 }
-p > a:hover{
+p > a:hover {
   color: var(--liver-organ);
   background-color: var(--macaroni-and-cheese);
   padding: 5px 0;
   border-radius: 10px;
 }
-.footerIconContainer{
+.footerIconContainer {
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 5px 0;
 }
-.footerIcon{
+.footerIcon {
   height: 50px;
   width: 50px;
 }
-.grupo-2{
+.grupo-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #75372Dff;
+  background-color: #75372dff;
 }
 #myBtn {
   display: none;
-  position: fixed; 
-  bottom: 20px; 
-  right: 30px; 
-  z-index: 99; 
-  outline: none; 
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  outline: none;
   background-color: goldenrod;
-  color: black; 
-  cursor: pointer; 
-  padding: 10px; 
-  border-radius: 50px; 
-  font-size: 18px; 
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 18px;
 }
 
 #myBtn:hover {
-  background-color: yellow; 
+  background-color: yellow;
 }
-.logoDog{
+.logoDog {
   height: 45px;
   width: 45px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   /* NAVBAR*/
-  .navContainer{
+  .navContainer {
     width: 90%;
     padding: 0;
   }
-  .navItemContainer{
+  .navItemContainer {
     flex-direction: column;
     justify-content: flex-start;
     background-color: var(--macaroni-and-cheese);
@@ -595,7 +596,7 @@ p > a:hover{
     padding: 0 0px;
     z-index: 3;
   }
-  .navToggle{
+  .navToggle {
     display: block;
     color: white;
     background: none;
@@ -604,23 +605,23 @@ p > a:hover{
     padding: 5px 20px;
     line-height: 20px;
   }
-  .navMenuVisible{
+  .navMenuVisible {
     left: 0;
   }
-  .pageContainer{
+  .pageContainer {
     padding: 0 10px;
   }
   /* MAIN*/
-  .mainTextContainer{
+  .mainTextContainer {
     padding: 60px 20px;
   }
-  .mainTextContainer > h2{
+  .mainTextContainer > h2 {
     font-size: 60px;
-    padding: 20px 0; 
+    padding: 20px 0;
   }
 
   /* GALERIA*/
-  .galeryContainer > h3{
+  .galeryContainer > h3 {
     font-size: 35px;
     margin-bottom: 20px;
     padding: 0 40px;
@@ -641,35 +642,34 @@ p > a:hover{
   }
 
   /* FOOTER */
-  #myBtn{
-    display: none !important; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
-    z-index: 99; 
-    outline: none;  
+  #myBtn {
+    display: none !important;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
     background-color: goldenrod;
-    color: black; 
-    cursor: pointer; 
-    padding: 10px; 
-    border-radius: 50px; 
-    font-size: 18px; 
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 18px;
   }
-  .logoDog{
+  .logoDog {
     height: 45px;
     width: 45px;
     display: none;
   }
-  #logoLetra{
+  #logoLetra {
     display: none;
   }
-  .footerSection1{
-      flex-wrap: wrap;
+  .footerSection1 {
+    flex-wrap: wrap;
   }
-  .box{
-      padding: 15px 0;
+  .box {
+    padding: 15px 0;
   }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -682,4 +682,3 @@ p > a:hover{
     height: 200px;
   }
 }
-
