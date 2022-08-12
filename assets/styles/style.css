@@ -210,16 +210,16 @@ p {
 .container-img .box-img:nth-child(4) {
   grid-row-start: span 2;
 }
-.figure{
+.figure {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-.imgGalery{
+.imgGalery {
   transition: all 0.5s ease-out;
   will-change: transform;
 }
-.capa{
+.capa {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -229,7 +229,7 @@ p {
   visibility: hidden;
   text-align: center;
 }
-.capa > h3{
+.capa > h3 {
   color: #fff;
   font-weight: 600;
   font-size: 45px;
@@ -241,13 +241,13 @@ p {
   opacity: 1;
   visibility: visible;
 }
-.figure:hover > .capa h3{
+.figure:hover > .capa h3 {
   margin-top: 90px;
 }
-.figure:hover > .capa .longh3{
+.figure:hover > .capa .longh3 {
   margin-top: 190px;
 }
-.figure:hover > .imgGalery{
+.figure:hover > .imgGalery {
   transform: scale(1.3);
 }
 
@@ -623,9 +623,9 @@ p > a:hover {
   align-items: center;
   position: relative;
   max-width: 190px;
- }
- 
- .input {
+}
+
+.input {
   width: 100%;
   height: 40px;
   line-height: 28px;
@@ -636,19 +636,20 @@ p > a:hover {
   outline: none;
   background-color: #f3f3f4;
   color: #0d0c22;
-  transition: .3s ease;
- }
- 
- .input::placeholder {
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
   color: #9e9ea7;
- }
- 
- .input:focus, input:hover {
+}
+
+.input:focus,
+input:hover {
   outline: none;
-  border-color: rgba(234,76,137,0.4);
+  border-color: rgba(234, 76, 137, 0.4);
   background-color: #fff;
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
- }
+}
 
 @media (max-width: 768px) {
   /* NAVBAR*/
@@ -742,10 +743,34 @@ p > a:hover {
     flex-wrap: wrap;
   }
   .box {
-    padding: 15px 0;
+    padding: 12px 0;
+  }
+  .box1 {
+    display: none;
+  }
+  .size-mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-big {
+    display: none;
+  }
+  .mainTextContainer {
+    padding: 20px 20px;
+    text-align: center;
+  }
+  .img.logo {
+    display: flex;
+    align-items: center;
   }
 }
 
+@media (min-width: 769px) {
+  .map-table {
+    display: none;
+  }
+}
 @media screen and (max-width: 500px) {
   /* GALERIA*/
   .container-img {
