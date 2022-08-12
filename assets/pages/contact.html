@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,7 +28,7 @@
   <body>
     <header>
       <div class="navContainer">
-        <a class="logoContainer" href="#">
+        <a class="logoContainer" href="../../index.html">
           <img class="logo" src="../images/logo.png" alt="Logo" />
         </a>
         <button class="navToggle">
@@ -67,12 +68,12 @@
             </div>
           </li>
           <li class="navMenuItem">
-            <a href="#" class="navMenuLink"
+            <a href="./contact.html" class="navMenuLink"
               >Contacto</a
             >
           </li>
           <li class="navMenuItem">
-            <a href="#" class="navMenuLink">Carrito</a>
+            <a href="./carritoFinal.html" class="navMenuLink">Carrito</a>
           </li>
         </ul>
       </div>
@@ -159,8 +160,19 @@
             <h4 class="text-center mb-4">Ubicación</h4>
             <div class="size-mapa mb-5">
               <iframe
+                class="map-big"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6871004466498!2d-58.432577748679876!3d-34.612072965352354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1654042634532!5m2!1ses-419!2sar"
                 width="550"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <iframe
+                class="map-table"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.698207206845!2d-58.432598484738975!3d-34.6117921654325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1660284333969!5m2!1ses-419!2sar"
+                width="380"
                 height="300"
                 style="border: 0"
                 allowfullscreen=""
@@ -172,10 +184,21 @@
 
           <div class="textContact mt-3">
             <div>
-              <h4><p>Mail:<a class="mail" href="mailto:Mail:mindypetshop@hotmail.com">mindypetshop@hotmail.com</a></p></h4>
+              <h4>
+                <p>
+                  Mail:<a
+                    class="mail"
+                    href="mailto:Mail:mindypetshop@hotmail.com"
+                  >
+                    mindypetshop@hotmail.com</a
+                  >
+                </p>
+              </h4>
             </div>
             <div>
-              <h4><p>Tel: <a href="tel:54 11 234 6543">+54 11 234 6543</a></p></h4>
+              <h4>
+                <p>Tel: <a href="tel:54112346543">+54 11 234 6543</a></p>
+              </h4>
             </div>
           </div>
         </div>
@@ -187,7 +210,7 @@
         <div class="footerSection1">
           <div class="box">
             <figure>
-              <a href="./index.html">
+              <a href="../../index.html">
                 <img
                   id="logoLetra"
                   class="footerLogo"
@@ -209,21 +232,21 @@
           <div class="box">
             <h2>Siguenos</h2>
             <div class="footerIconContainer">
-              <a href="https://www.instagram.com/">
+              <a href="https://www.instagram.com/" target="_blank">
                 <img
                   src="../images/icons/instagram.png"
                   alt=""
                   class="footerIcon"
                 />
               </a>
-              <a href="https://www.facebook.com/">
+              <a href="https://www.facebook.com/" target="_blank">
                 <img
                   src="../images/icons/facebook.png"
                   alt=""
                   class="footerIcon"
                 />
               </a>
-              <a href="https://web.whatsapp.com/">
+              <a href="https://web.whatsapp.com/" target="_blank">
                 <img
                   src="../images/icons/whatsapp.png"
                   alt=""
