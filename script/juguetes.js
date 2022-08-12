@@ -68,7 +68,7 @@ const mostrarPagina = (data) => {
     <div class="SearchBox"> 
     <input autocomplete="off" type="text" class="SearchBox-input" placeholder="Buscar Producto" id="search"/>
     <button class="SearchBox-button" id="searchBoxButton">
-                        <img src="../images/Icons/lupa.png" class="SearchBox-icon" alt="search icon" />
+                        <img src="../images/icons/lupa.png" class="SearchBox-icon" alt="search icon" />
     </button>
     </div>
   `

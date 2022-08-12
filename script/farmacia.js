@@ -1,3 +1,30 @@
+// SCROLL TO TOP BUTTON
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// BUTTON MENU
+let navItemContainer = document.querySelector('.navItemContainer')
+let navToggle = document.querySelector('.navToggle')
+
+navToggle.addEventListener('click', () => {
+  navItemContainer.classList.toggle('navMenuVisible')
+})
+
+
 
 
 
@@ -46,7 +73,7 @@ const mostrarPagina = (data) => {
     <div class="SearchBox"> 
     <input autocomplete="off" type="text" class="SearchBox-input" placeholder="Buscar Producto" id="search"/>
     <button class="SearchBox-button" id="searchBoxButton">
-                        <img src="../images/Icons/lupa.png" class="SearchBox-icon" alt="search icon" />
+                        <img src="../images/icons/lupa.png" class="SearchBox-icon" alt="search icon" />
     </button>
     </div>
   `
