@@ -7,7 +7,7 @@ fetch(api)
 const mostrarPagina = (data) => {
   const arrayShop = data.response;
   
-
+  localStorage.removeItem('producto')
 
   const contenedorCarta = document.querySelector(".cartas"); // DONDE SE IMPRIME LAS CARTAS
 
@@ -118,12 +118,12 @@ const mostrarPagina = (data) => {
                      <img src="${item.imagen}" class="card-img-top imagen" alt="${item.nombre}"> 
                     <h5 class="card-title">${item.nombre}</h5>
                     <p class="container card-text">${item.tipo}</p>
-                    <p class="container card-text">${item.descripcion}</p>
+                    <p class="container card-texto">${item.descripcion}</p>
                     <div class="d-flex justify-content-around ">
-                    <p>Price: $<span class="precio">${item.precio} -</span></p>
-                    ${item.stock > 5 ? ` Stock: <p class="stock">${item.stock}</p>` : `<p class=" text-center"><b>Ultima(s) <span class="stock">${item.stock}</span> unidades!</b></p>`}
+                    <p>Price: $<span class="precio">${item.precio}</span></p>
+                    ${item.stock > 5 ? `Stock: <p class="stock">${item.stock}</p>` : `<p class="alert-danger text-center"><b>Ultima(s) <span class="stock">${item.stock}</span> unidad(es)!</b></p>`}
                     </div>
-                    <button class="boton " id='${item._id}' >comprar</button>
+                    <button class="boton " id='agregar${item._id}' >comprar</button>
                     </div>
                     `;
       contenedorCarta.innerHTML = carta;
@@ -141,23 +141,20 @@ const mostrarPagina = (data) => {
       
     }
     getEventos()
-   
-        
-     
-
+    
+    
+    
     function eliminarProducto(e){
       if(e.target.classList.contains("close")){ // true si lo q clickea es la X
         const eliminarId = e.target.getAttribute("id") 
 
         productoComprado.forEach(valor => {
-      
           if(valor.id == eliminarId){ // si lo q compro [] es lo mismo q lo q clickeo
             let precioActualizado = parseFloat(valor.precio) * parseFloat(valor.cantidad);
             
             totalCartas = totalCartas - precioActualizado
             totalCartas = totalCartas.toFixed(2)
           }
-          
         })
 
         productoComprado = productoComprado.filter(producto => producto.id !== eliminarId)
@@ -181,37 +178,39 @@ const mostrarPagina = (data) => {
     function agregarProducto(e){
       if(e.target.classList.contains("boton")){ // si clickie comprar
         const productoSeleccionado = e.target.parentElement // 
+        console.log(productoSeleccionado)
        
         leerInfo(productoSeleccionado) // la etiqueta de la card
  // 
  
-}
+        if(productoComprado.length===1 && productoComprado[0].cantidad===1){
+          let buttonLocal =  document.getElementById("butonBuy")
+          console.log(buttonLocal)
+          buttonLocal.addEventListener("click",function(){
+            alert("tu pedido ya fue agregado al carrito")
+            compra(productoComprado)
+          })
+        }
 
-}
+      }
+    }
 
-if(productoComprado.length===1 && productoComprado[0].cantidad===1){
-  
-  let buttonLocal =  document.getElementById("butonBuy")
-  console.log(buttonLocal)
-  buttonLocal.addEventListener("click",function(){
-    compra(productoComprado)
-  })
-}
+    function compra (prod){
+      if(localStorage.key('producto')){
+        localStorage.removeItem('producto')
+        localStorage.setItem("producto",JSON.stringify(prod))
+      }else{
+        localStorage.setItem("producto",JSON.stringify(prod))
+      }
 
-function compra (prod){
-  if(localStorage.key('producto')){
-    localStorage.removeItem('producto')
-    localStorage.setItem("producto",JSON.stringify(prod))
-  }
+      
 
-  
-
-}
+    }
     
     function leerInfo(producto){
       const infoProducto = {
         nombre: producto.querySelector(".card-title").textContent,
-        tipo: producto.querySelector(".card-text").textContent,
+        tipo :producto.querySelector(".card-text").textContent,
         precio: producto.querySelector(".precio").textContent,
         imagen: producto.querySelector(".imagen").src,
         id: producto.querySelector(".boton").getAttribute("id"),
@@ -220,7 +219,6 @@ function compra (prod){
       }
 
       totalCartas =parseFloat(totalCartas) + parseFloat(infoProducto.precio) 
-      
       totalCartas = totalCartas.toFixed(2)  // precio actual + precio producto
 
       const existe = productoComprado.some(producto => producto.id === infoProducto.id);
@@ -228,13 +226,12 @@ function compra (prod){
           const prod = productoComprado.map(producto =>{
      
             
-            if(producto.cantidad < parseInt(producto.stock) && (producto.id ===infoProducto.id)){
+            if(producto.cantidad +1 <=parseInt(producto.stock) && (producto.id ===infoProducto.id)){
+              // alert("NO HAY STOCK DE ESTE PRODUCTO")
               
-              producto.cantidad++;
-              return producto
-            }else{
-              // alert("te has quedado sin productos")              
-              // console.log("full")
+                producto.cantidad++;
+                return producto
+              }else{
                   return producto
                 }
             
@@ -255,8 +252,6 @@ function compra (prod){
       console.log(productoComprado)
       // localStorage.setItem("producto",productoComprado)
     }
-
-  
 
     
    
