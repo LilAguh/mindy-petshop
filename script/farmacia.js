@@ -216,16 +216,15 @@ function agregarProducto(e){
 
   }
 }
-
 function compra (prod){
-  if(localStorage.length>=1){
-    localStorage.clear()
+  if(localStorage.key('farmacia')){
+    localStorage.removeItem('farmacia')
+    localStorage.setItem("farmacia",JSON.stringify(prod))
   }else{
-
-    localStorage.setItem("producto",JSON.stringify(prod))
+    localStorage.setItem("farmacia",JSON.stringify(prod))
   }
 
-}
+
 
 function leerInfo(producto){
   const infoProducto = {
