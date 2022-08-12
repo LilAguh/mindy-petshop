@@ -290,6 +290,9 @@ article {
   justify-content: space-evenly;
   align-items: center;
 }
+.bannerSimple{
+  width: 100%;
+}
 .container > img.blocks {
   display: flex;
   justify-content: center;
@@ -419,9 +422,10 @@ article h2 {
   width: 100%;
 }
 .ultimas{
-  
   font-weight: bolder;
   font-style: italic;
+  border: 3px solid var(--amazon);
+  border-radius: 12px;
 }
 .btn-buy:active {
   border: 2px solid #f8c592ff;
@@ -482,6 +486,9 @@ article h2 {
 .checkPrecios{
   color:  #75372Dff;
 }
+.precio{
+  color: var(--liver-organ);
+}
 .search1{
   background-color: #F8C592ff;
   border: 2px solid #75372Dff;
@@ -496,19 +503,20 @@ article h2 {
 }
 .card-text{
   margin: 0.1rem;
-  color:#AC7455ff;
+  color: var(--liver-organ);
  
 }
 .card-text2{
   margin: 0.1rem;
-  color:#AC7455ff;
+  color:var(--liver-organ);
   display: inline-block!important;
   padding-left: 1rem;
 }
 .card-title{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   padding: 0.2rem;
+  color: var(--liver-organ);
 }
 .inputCheck:checked {
   background-color: #598063ff;
@@ -539,7 +547,7 @@ article h2 {
 }
 .botondes{
   background-color:#F8C592ff;
-  color:#AC7455ff;
+  color: var(--liver-organ);
   text-align: start;
   border: none;
  
@@ -653,19 +661,69 @@ article h2 {
   width: 80%;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 14px;
+  align-self: center;
   padding: 3px;
   background-color:  #75372Dff;
   margin: 0.5rem;
   color: #F8C592ff ;
+  outline: 0;
+  border: 3px solid var(--liver-organ);
 }
 #butonBuy:hover{
-  background-color: rgb(249, 122, 4);
+  background-color: var(--macaroni-and-cheese);
+  border: 3px solid var(--liver-organ);
+  color: var(--liver-organ);
 }
 
 /* .cartas {
   display: flex;
   flex-wrap: wrap;
 } */
+
+/*  SEARCHBOX  */
+.SearchBox-input {
+  border: none;
+  background: none;
+  outline: 0;
+}
+.SearchBox-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchBox-input::placeholder {
+  color:var(--liver-organ);
+  font-size: 16px;
+  font-weight: 600;
+}
+.SearchBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 340px;
+  border-radius: 12px;
+  background-color: var(--macaroni-and-cheese);
+  border: 3px solid var(--liver-organ);
+  height: 40px;
+}
+.SearchBox-input {
+  width: 340px;
+  color: var(--liver-organ);
+  text-align: center;
+}
+.SearchBox-button {
+  display: flex;
+  width: 50px;
+  background-color: var(--liver-organ);
+}
+.SearchBox-icon {
+  height: 26px;
+  margin: auto;
+}
 
 /*-------FOOTER------------------------------------------------------------------------------------------------------------------------*/
 /* #logoLetra{
@@ -729,7 +787,6 @@ p > a:hover {
 }
 .footerIcon {
   height: 50px;
-  width: 50px;
 }
 .grupo-2 {
   display: flex;
