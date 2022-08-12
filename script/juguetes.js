@@ -65,14 +65,17 @@ const mostrarPagina = (data) => {
 
   function crearCheckbox() {
     div = `
-    <div> 
-      <input type="search" name="search" id="search" placeholder="Search" aria-label="Search" />
+    <div class="SearchBox"> 
+    <input autocomplete="off" type="text" class="SearchBox-input" placeholder="Buscar Producto" id="search"/>
+    <button class="SearchBox-button" id="searchBoxButton">
+                        <img src="../images/Icons/lupa.png" class="SearchBox-icon" alt="search icon" />
+    </button>
     </div>
   `
     categoriasSinRepetidos.forEach(checkbox => {
       div += `
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="checkBox" value="${checkbox}">
+    <div class="form-check form-check-inline m-2">
+      <input class="form-check-input inputCheck" type="checkbox" id="flexCheckDefault" value="${checkbox}">
       <label class="form-check-label" for="inlineCheckbox1"><b>${checkbox}</b></label>
     </div>`
     })
@@ -142,17 +145,40 @@ const mostrarPagina = (data) => {
   function crearProducto(array) {
     let carta = "";
     array.forEach((item) => {
-      carta += ` <div class="card gap-2 d-flex flex-wrap m-4 justify-content-between" style="width: 18rem;">
-                     <img src="${item.imagen}" class="card-img-top imagen" alt="${item.nombre}"> 
-                    <h5 class="card-title">${item.nombre}</h5>
-                    <p class="container card-text">${item.tipo}</p>
-                    <p class="container card-texto">${item.descripcion}</p>
-                    <div class="d-flex justify-content-around ">
-                    <p>Price: $<span class="precio">${item.precio}</span></p>
-                    ${item.stock > 5 ? `Stock: <p class="stock">${item.stock}</p>` : `<p class="alert-danger text-center"><b>Ultima(s) <span class="stock">${item.stock}</span> unidad(es)!</b></p>`}
-                    </div>
-                    <button class="boton " id='agregar${item._id}' >comprar</button>
-                    </div>
+      carta += ` 
+      <div class="card card2 style="width: 18rem;">
+        <img src="${item.imagen}" class="card-img-top imagen" alt="${item.nombre}"> 
+        <div class="card-body d-flex flex-column justify-content-evenly p-2">
+          <h5 class="card-title">${item.nombre}</h5>
+          <p class="container card-text">${item.tipo}</p>
+
+            <div class="w3-container">
+              <button onclick="document.getElementById('${item.nombre}').style.display='block'" class=" botondes">Descripcion  <i class="fa-solid fa-plus"></i></button>
+              <div id="${item.nombre}" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content">
+                  <header class="w3-container w3-teal"> 
+                    <span onclick="document.getElementById('${item.nombre}').style.display='none'" 
+                      class="w3-button w3-display-topright " >&times;
+                    </span>
+                    <h2 class="titulomodal">${item.nombre}</h2>
+                  </header>
+                  <div class="w3-container">
+                    <p class="descripcion">${item.descripcion}</p>
+                  </div>
+                  <footer class="w3-container w3-teal">
+                    <p">${item.tipo}</p>
+                  </footer>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-around ">
+              <p class="precio">Precio:$<span class="precio card-text2">${item.precio}</span></p>
+              ${item.stock > 5 ? `<p class="stock precio">Stock:${item.stock}</p>` : `<p class=" precio text-center ultimas"><b>Ultima(s) <span class="precio stock">${item.stock}</span> unidades!</b></p>`}
+            </div>
+        </div>
+        <button class="boton btn d-flex justify-content-around align-items-center btn-buy" id='agregar${item._id}'>Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
                     `;
       contenedorCarta.innerHTML = carta;
 
