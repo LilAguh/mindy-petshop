@@ -486,7 +486,7 @@ article h2 {
 .checkPrecios{
   color:  #75372Dff;
 }
-.precio{
+.precio, .precioColor{
   color: var(--liver-organ);
 }
 .search1{

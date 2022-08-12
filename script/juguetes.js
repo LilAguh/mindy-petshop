@@ -173,7 +173,7 @@ const mostrarPagina = (data) => {
             </div>
 
             <div class="d-flex justify-content-around ">
-              <p class="precio">Precio:$<span class="precio card-text2">${item.precio}</span></p>
+              <p class="precioColor">Precio:$<span class="precio card-text2">${item.precio}</span></p>
               ${item.stock > 5 ? `<p class="stock precio">Stock:${item.stock}</p>` : `<p class=" precio text-center ultimas"><b>Ultima(s) <span class="precio stock">${item.stock}</span> unidades!</b></p>`}
             </div>
         </div>
