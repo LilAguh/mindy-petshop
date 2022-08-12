@@ -651,6 +651,26 @@ input:hover {
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f8c592ff;
+  padding: 10px;
+}
+
+.flex-container div {
+  background-color: #f8c592ff;
+  width: 250px;
+  text-align: center;
+}
+.info-comprar {
+  margin-top: 10px;
+}
+.titulo-banner {
+  margin-top: 5px;
+  width: 100%;
+}
 @media (max-width: 768px) {
   /* NAVBAR*/
   .navContainer {
@@ -760,10 +780,6 @@ input:hover {
     padding: 20px 20px;
     text-align: center;
   }
-  .img.logo {
-    display: flex;
-    align-items: center;
-  }
 }
 
 @media (min-width: 769px) {
@@ -779,5 +795,8 @@ input:hover {
   }
   .container-img .box-img img {
     height: 200px;
+  }
+  .textContact {
+    width: 400px;
   }
 }
