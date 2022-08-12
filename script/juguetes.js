@@ -218,16 +218,13 @@ if(productoComprado.length===1 && productoComprado[0].cantidad===1){
     compra(productoComprado)
   })
 }
-
-    function compra (prod){
-      if(localStorage.length>=1){
-        localStorage.clear()
-      }else{
-
-        localStorage.setItem("producto",JSON.stringify(prod))
-      }
-
-    }
+function compra (prod){
+  if(localStorage.key('farmacia')){
+    localStorage.removeItem('farmacia')
+    localStorage.setItem("farmacia",JSON.stringify(prod))
+  }else{
+    localStorage.setItem("farmacia",JSON.stringify(prod))
+  }
     
     function leerInfo(producto){
       const infoProducto = {
@@ -326,3 +323,4 @@ if(productoComprado.length===1 && productoComprado[0].cantidad===1){
 //                     <button class="boton " id='${item._id}' >comprar</button>
 //                     </div>
 //                     `
+}
