@@ -7,7 +7,7 @@ fetch(api)
 const mostrarPagina = (data) => {
   const arrayShop = data.response;
   
-
+  localStorage.removeItem('farmacia')
 
   const contenedorCarta = document.querySelector(".cartas"); // DONDE SE IMPRIME LAS CARTAS
 
@@ -188,6 +188,7 @@ function agregarProducto(e){
       let buttonLocal =  document.getElementById("butonBuy")
       console.log(buttonLocal)
       buttonLocal.addEventListener("click",function(){
+        alert("tu pedido ya fue agregado al carrito")
         compra(productoComprado)
       })
     }
@@ -198,6 +199,8 @@ function agregarProducto(e){
 function compra (prod){
   if(localStorage.key('farmacia')){
     localStorage.removeItem('farmacia')
+    localStorage.setItem("farmacia",JSON.stringify(prod))
+  }else{
     localStorage.setItem("farmacia",JSON.stringify(prod))
   }
 
