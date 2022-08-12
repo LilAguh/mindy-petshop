@@ -38,13 +38,13 @@ const mostrarPagina = (data) => {
  function crearCheckbox(){
   div = `
     <div> 
-      <input type="search" name="search" id="search" placeholder="Search" aria-label="Search" />
+      <input type="search" name="search" id="search" placeholder="Buscar" aria-label="Search" class="search1"  />
     </div>
   `
   categoriasSinRepetidos.forEach(checkbox =>{
     div +=`
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="checkBox" value="${checkbox}">
+      <input class="form-check-input inputCheck" type="checkbox" id="checkBox" value="${checkbox}">
       <label class="form-check-label" for="inlineCheckbox1"><b>${checkbox}</b></label>
     </div>`
   })
@@ -114,18 +114,40 @@ const mostrarPagina = (data) => {
   function crearProducto(array) {
     let carta = "";
     array.forEach((item) => {
-      carta += ` <div class="card gap-2 d-flex flex-wrap m-4 justify-content-between" style="width: 18rem;">
+      carta += ` <div class="card card2 style="width: 18rem;">
                      <img src="${item.imagen}" class="card-img-top imagen" alt="${item.nombre}"> 
-                    <h5 class="card-title">${item.nombre}</h5>
-                    <p class="container card-text">${item.tipo}</p>
-                    <p class="container card-text">${item.descripcion}</p>
+                     <div class="card-body d-flex flex-column justify-content-evenly p-2">
+                     <h5 class="card-title">${item.nombre}</h5>
+                    <p class="container card-text"></p>
+                    
+                    <div class="w3-container">
+    <button onclick="document.getElementById('${item.nombre}').style.display='block'" class=" botondes">Descripcion  <i class="fa-solid fa-plus"></i></button>
+  
+    <div id="${item.nombre}" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('${item.nombre}').style.display='none'" 
+        class="w3-button w3-display-topright " >&times;</span>
+        <h2 class="titulomodal">${item.nombre}</h2>
+      </header>
+      <div class="w3-container">
+        <p class="descripcion">${item.descripcion}</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p">${item.tipo}</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
                     <div class="d-flex justify-content-around ">
-                    <p>Price: $<span class="precio">${item.precio} -</span></p>
-                    ${item.stock > 5 ? ` Stock: <p class="stock">${item.stock}</p>` : `<p class=" text-center"><b>Ultima(s) <span class="stock">${item.stock}</span> unidades!</b></p>`}
+                    <p>Precio:$<span class="precio card-text2">${item.precio}</span></p>
+                    ${item.stock > 5 ? `Stock:<p class="stock ultimas">${item.stock}</p>` : `<p class=" text-center ultimas"><b>Ultima(s) <span class="stock ultimas">${item.stock}</span> unidades!</b></p>`}
                     </div>
-                    <button class="boton " id='${item._id}' >comprar</button>
                     </div>
-                    `;
+                    <button class="boton btn d-flex justify-content-around align-items-center btn-buy" id='${item._id}'>Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    `
       contenedorCarta.innerHTML = carta;
       
       
@@ -141,10 +163,9 @@ const mostrarPagina = (data) => {
       
     }
     getEventos()
+    
    
-        
-     
-
+    
     function eliminarProducto(e){
       if(e.target.classList.contains("close")){ // true si lo q clickea es la X
         const eliminarId = e.target.getAttribute("id") 
@@ -198,15 +219,15 @@ if(productoComprado.length===1 && productoComprado[0].cantidad===1){
   })
 }
 
-function compra (prod){
-  if(localStorage.key('producto')){
-    localStorage.removeItem('producto')
-    localStorage.setItem("producto",JSON.stringify(prod))
-  }
+    function compra (prod){
+      if(localStorage.length>=1){
+        localStorage.clear()
+      }else{
 
-  
+        localStorage.setItem("producto",JSON.stringify(prod))
+      }
 
-}
+    }
     
     function leerInfo(producto){
       const infoProducto = {
@@ -228,13 +249,13 @@ function compra (prod){
           const prod = productoComprado.map(producto =>{
      
             
-            if(producto.cantidad < parseInt(producto.stock) && (producto.id ===infoProducto.id)){
+            if(producto.cantidad +1 <=parseInt(producto.stock) && (producto.id ===infoProducto.id)){
+              // alert("NO HAY STOCK DE ESTE PRODUCTO")
+            
               
               producto.cantidad++;
               return producto
             }else{
-              // alert("te has quedado sin productos")              
-              // console.log("full")
                   return producto
                 }
             
@@ -292,3 +313,16 @@ function compra (prod){
       
 
 }; // final del fetch
+
+// carta += ` <div class="card gap-2 d-flex flex-wrap m-4 justify-content-between" style="width: 18rem;">
+//                      <img src="${item.imagen}" class="card-img-top imagen" alt="${item.nombre}"> 
+//                     <h5 class="card-title">${item.nombre}</h5>
+//                     <p class="container card-text">${item.tipo}</p>
+//                     <p class="container card-text">${item.descripcion}</p>
+//                     <div class="d-flex justify-content-around ">
+//                     <p>Price: $<span class="precio">${item.precio} -</span></p>
+//                     ${item.stock > 5 ? ` Stock: <p class="stock">${item.stock}</p>` : `<p class=" text-center"><b>Ultima(s) <span class="stock">${item.stock}</span> unidades!</b></p>`}
+//                     </div>
+//                     <button class="boton " id='${item._id}' >comprar</button>
+//                     </div>
+//                     `

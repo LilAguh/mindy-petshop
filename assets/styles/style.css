@@ -397,15 +397,10 @@ article h2 {
   height: 100%;
   width: 100%;
 }
-.ultimas {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: #598063ff;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
+.ultimas{
+  
+  font-weight: bolder;
+  font-style: italic;
 }
 .btn-buy:active {
   border: 2px solid #f8c592ff;
@@ -414,24 +409,28 @@ article h2 {
   background-color: #75372dff;
   color: #f8c592ff;
   margin-top: 0.5rem;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 0.5rem;
 }
 .btn-buy:hover {
   background-color: #75372dff;
 }
-.card2 {
-  background-color: #ac7455ff;
-  border-radius: 8px;
-  border: 2px solid #598063ff;
-  color: #f8c592ff;
-  height: 60vh;
+.card2{
+  background-color:#F8C592ff;
+  border-radius: 10px;
+  border: 3px solid #598063ff;
+  color:#AC7455ff;
+  width: 18rem;
+  height: 35rem ;
   display: flex;
   flex-direction: column;
-  align-items: space-evenly;
 }
 
 .cajaShop {
   display: flex;
   flex-direction: row;
+  margin: 1rem;
 }
 
 .cajaCards {
@@ -441,26 +440,54 @@ article h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  width: 100%;
 }
-.cajaCheck {
-  width: 20%;
+.caja1{
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cajaCheck{
+  width: 15%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
   border-right: 4px solid #598063ff;
-  color: #75372dff;
+  color: #75372Dff;
+}
+.checkPrecios{
+  color:  #75372Dff;
+}
+.search1{
+  background-color: #F8C592ff;
+  border: 2px solid #75372Dff;
+  border-radius: 6px;
+  margin: 1rem;
 }
 .container {
-  width: 80%;
+  width: 100%;
 }
-.check1 {
-  height: 40%;
-  padding-top: 2rem;
+.tituloCard{
+  height: 3.5rem;
 }
-.check2 {
-  height: 60%;
-  padding-top: 2rem;
+.card-text{
+  margin: 0.1rem;
+  color:#AC7455ff;
+ 
+}
+.card-text2{
+  margin: 0.1rem;
+  color:#AC7455ff;
+  display: inline-block!important;
+  padding-left: 1rem;
+}
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0.2rem;
 }
 .inputCheck:checked {
   background-color: #598063ff;
@@ -468,6 +495,85 @@ article h2 {
 }
 .inputCheck {
   border: 1px solid #75372dff;
+  background-color: #F8C592ff;
+}
+.form-check-input:focus{
+  outline-color: transparent; 
+  outline:none !important;
+  outline-offset: 0 !important;
+  
+}
+.inputCheck{
+  border: 1px solid #75372Dff;
+}
+.card-body{
+  padding: 0.3rem;
+}
+.descripcion{
+  font-size: 12px;
+}
+.card-title{
+  height: 3rem;
+  margin: 0.5rem;
+}
+.botondes{
+  background-color:#F8C592ff;
+  color:#AC7455ff;
+  text-align: start;
+  border: none;
+ 
+}
+
+.modalFondo{
+  background-color:#F8C592ff;
+  border-color:#598063ff ;
+  color: #75372Dff ;
+}
+.w3-modal-content{
+  background-color:#F8C592ff;
+  width: 40%;
+  border-radius: 10px !important; 
+  border:2px solid #598063ff !important;
+}
+.w3-teal{
+  color: #75372Dff !important;
+  background-color: #F8C592ff !important;
+ font-size: 24px;
+  padding: 1rem;
+  border-radius: 8px !important;
+  
+}
+.descripcion{
+  font-size: 14px;
+  color: #75372Dff !important;
+  border-top: 2px solid var(--amazon);
+  border-bottom: 2px solid var(--amazon);
+  padding: 1rem;
+  font-style: oblique;
+}
+.titulomodal{
+  font-size: 28px;
+  
+  font-weight: bold;
+  padding: 0;
+  font-family: "Benson";
+  text-shadow: 2px 2px 2px var(--amazon);
+
+}
+.w3-button{
+  padding: 0.1rem !important;
+  background-color: none !important;
+}
+.w3-display-topright{
+  position: absolute !important;
+}
+.titulopet{
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+  color: #75372Dff;
+  font-family: "Benson";
+  text-shadow: 2px 2px 2px var(--amazon);
 }
 /*PETSHOP DESDE EL JS DE ELVIO*/
 .card {
@@ -476,35 +582,40 @@ article h2 {
 
 .carrito-html {
   position: absolute;
-  top: 82px;
-  right: 20px;
+  top: 80px;
+  right: 10px;
   background-color: rgb(246, 206, 94);
-  /* background-color: white; */
-  min-width: 300px;
+  color: #AC7455ff;
+  max-width: 300px;
   text-align: center;
   z-index: 1;
-  border: 2px solid black;
-  /* display: none; */
+  border: 1px solid black;
+  border-radius: 10px;
+
 }
 
+.close:hover{
+  background-color: rgb(249, 122, 4);
+}
 .close {
-  background-color: red;
-  /* border-radius: 50%; */
-  text-align: center;
+  background-color: rgb(252, 152, 71);
   padding: 1px 5px;
-  /* border-radius: 50%; */
   width: 30px;
   height: 30px;
   cursor: pointer;
   margin-left: 10px;
   border: 1px solid black;
+  font-weight: bold;
+  color: #AC7455ff;
 }
-
+.cantidadCarrito{
+  font-weight: bold;
+}
 .ocultar {
   display: none;
 }
 .carta-carrito-top {
-  border-bottom: 4px solid orangered;
+  border-bottom: 3px solid #75372Dff;
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
@@ -517,11 +628,23 @@ article h2 {
 .imagen {
   height: 300px;
 }
+#butonBuy{
+  width: 80%;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 3px;
+  background-color:  #75372Dff;
+  margin: 0.5rem;
+  color: #F8C592ff ;
+}
+#butonBuy:hover{
+  background-color: rgb(249, 122, 4);
+}
 
-.cartas {
+/* .cartas {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 /*-------FOOTER------------------------------------------------------------------------------------------------------------------------*/
 /* #logoLetra{
@@ -646,7 +769,7 @@ p > a:hover {
  .input:focus, input:hover {
   outline: none;
   border-color: rgba(234,76,137,0.4);
-  background-color: #fff;
+  
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
  }
 
