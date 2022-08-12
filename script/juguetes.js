@@ -141,9 +141,10 @@ const mostrarPagina = (data) => {
       
     }
     getEventos()
-    
    
-    
+        
+     
+
     function eliminarProducto(e){
       if(e.target.classList.contains("close")){ // true si lo q clickea es la X
         const eliminarId = e.target.getAttribute("id") 
@@ -197,15 +198,15 @@ if(productoComprado.length===1 && productoComprado[0].cantidad===1){
   })
 }
 
-    function compra (prod){
-      if(localStorage.length>=1){
-        localStorage.clear()
-      }else{
+function compra (prod){
+  if(localStorage.key('producto')){
+    localStorage.removeItem('producto')
+    localStorage.setItem("producto",JSON.stringify(prod))
+  }
 
-        localStorage.setItem("producto",JSON.stringify(prod))
-      }
+  
 
-    }
+}
     
     function leerInfo(producto){
       const infoProducto = {
@@ -227,13 +228,13 @@ if(productoComprado.length===1 && productoComprado[0].cantidad===1){
           const prod = productoComprado.map(producto =>{
      
             
-            if(producto.cantidad +1 <=parseInt(producto.stock) && (producto.id ===infoProducto.id)){
-              // alert("NO HAY STOCK DE ESTE PRODUCTO")
-            
+            if(producto.cantidad < parseInt(producto.stock) && (producto.id ===infoProducto.id)){
               
               producto.cantidad++;
               return producto
             }else{
+              // alert("te has quedado sin productos")              
+              // console.log("full")
                   return producto
                 }
             
